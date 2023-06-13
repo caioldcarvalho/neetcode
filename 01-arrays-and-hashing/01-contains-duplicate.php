@@ -16,7 +16,7 @@ class Solution
 
             unset($aux[$key]);
 
-            if (in_array($num, $aux)) return in_array($num, $aux);
+            if (isset($aux[$num])) return true;
         }
 
         return false;
