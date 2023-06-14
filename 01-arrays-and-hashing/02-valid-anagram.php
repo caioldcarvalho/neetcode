@@ -1,8 +1,5 @@
 <?php
 
-/**
- * Trying a solution without using "array_reverse()"
- */
 
 class Solution {
 
@@ -12,13 +9,16 @@ class Solution {
      * @return bool
      */
     function isAnagram($s, $t) {
-        $aux = [];
-        $j = 0;
-        for ($i=strlen($t)-1; $i >= 0; $i--) { 
-            $aux[$j] = $t[$i];
-            $j++;
+        if (strlen($s) !== strlen($t)) return false;
+
+        $sumS = $sumT = 0;
+        
+        for ($i = 0; $i < strlen($s); $i++) {
+            $sumS = $sumS + ord($s[$i]);
+            $sumT = $sumT + ord($t[$i]);
         }
 
-        return $s === implode($aux);
+        return $sumS === $sumT;
+
     }
 }
