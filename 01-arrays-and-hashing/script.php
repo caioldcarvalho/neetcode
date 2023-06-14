@@ -1,7 +1,7 @@
 <?php
 
-include "01-contains-duplicate.php";
+include "02-valid-anagram.php";
 
-$aux = new Solution;
+$sol = new Solution;
 
-echo $aux->containsDuplicate([1, 2, 3, 4, 1]) ? "true" : "false";
+echo $sol->isAnagram("abc", "cba") ? "true" : "false";

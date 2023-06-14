@@ -12,6 +12,13 @@ class Solution {
      * @return bool
      */
     function isAnagram($s, $t) {
-        
+        $aux = [];
+        $j = 0;
+        for ($i=strlen($t)-1; $i >= 0; $i--) { 
+            $aux[$j] = $t[$i];
+            $j++;
+        }
+
+        return $s === implode($aux);
     }
 }
