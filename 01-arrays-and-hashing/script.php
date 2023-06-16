@@ -1,7 +1,7 @@
 <?php
 
-include "02-valid-anagram.php";
+include "03-two-sum.php";
 
 $sol = new Solution;
 
-echo $sol->isAnagram("abca", "caba") ? "true" : "false";
+print_r($sol->twoSum([2, 4, 10, 13], 14));
