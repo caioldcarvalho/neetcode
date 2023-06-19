@@ -1,7 +1,7 @@
 <?php
 
-include "03-two-sum.php";
+include "04-group-anagrams.php";
 
 $sol = new Solution;
 
-print_r($sol->twoSum([2, 4, 10, 13], 14));
+print_r($sol->groupAnagrams(["ate", "eta", "abc", "eat", "ccc", "cba"]));
